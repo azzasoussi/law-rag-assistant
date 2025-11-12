@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 300px;
+            background-color: rgb(28, 26, 40);
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 500px;
+            height: 40px;
+            padding: 10px;
+            margin-right: 4px;
+            border-radius: 10px;
+            border: 1px solid #493e61;
+            background-color: #312a42;
+            box-shadow: 10px 10px 10px #16161c;
+            color:rgb(190, 183, 229);
+        }
+        button {
+            padding: 10px 15px;
+            width: 100px;
+            height: 65px;
+            background-color: #15151d;
+            color: rgb(190, 183, 229);
+            border: none;
+            border: 1px solid #493e61;
+            box-shadow: 10px 10px 10px #16161c;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #493e61
+            ;
+        }
+        .response {
+            margin-top: 20px;
+            font-size: 18px;
+            color: rgb(190, 183, 229);
+            padding-left: 400px;
+            padding-right: 400px ;
+        }
+        h1{
+            color: rgb(190, 183, 229)
+        }
+    </style>
+<head>
+    <title>Kanounji</title>
+</head>
+<body>
+    <h1>My name is Kanounji, ask me a question  </h1>
+    <form method="post">
+        <input type="text" name="user_message" placeholder="Type your question..." required>
+        <button type="submit">Send</button>
+    </form>
+
+    {% if response %}
+        <div class="response">{{ response }}</div>
+    {% endif %}
+</body>
+</html> 
